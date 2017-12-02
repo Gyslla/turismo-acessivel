@@ -10,8 +10,20 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: acessibilidade_dev
+  host: 10.20.3.169
+  username: dev
+  password: dev
+
+staging:
+  adapter: mysql2
+  encoding: utf8
+  database: acessibilidade_staging
+  host: 10.20.3.169
+  username: staging
+  password: staging
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
